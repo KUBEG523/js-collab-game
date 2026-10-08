@@ -58,10 +58,52 @@ function rozejrzyj() {
 // SEKCJA B — RUCH
 function idz(kierunek) {
   // TODO B1: zablokuj ruch po koncu gry.
+  if(koniec == true)
+  {
+    console.log("Gra została zakończona, napisz start(), aby rozpocząc jeszcze raz.");
+    return;
+  }
+
   // TODO B2: switch kierunku; oblicz kandydat na nowy pokoj.
+  let nastepnyPokoj = pokoj;
+
+  switch(kierunek)
+  {
+    case "lewo":
+      {
+        nastepnyPokoj -= 1;
+        break;
+      }
+    case "prawo":
+      {
+        nastepnyPokoj += 1;
+        break;
+      }
+    case "gora", "dol":
+    {
+      console.log("Możesz się poruszać tylko w lewo i w prawo.");
+      break;
+    }
+    default:
+    {
+      console.log("Nieznana komenda, spróbuj jeszcze raz");
+      break;
+    }
+  }
+
   // TODO B3: odrzuc pokoj poza 1..4 i nieznany kierunek bez kosztu.
+
+  if(nastepnyPokoj < 1 || nastepnyPokoj > 4)
+  {
+    console.log("Napotkałeś na ścianę.");
+    nastepnyPokoj = pokoj;
+    energia++;
+  }
+
   // TODO B4: zapisz poprawny pokoj, rozejrzyj(), zakonczTure().
-  console.log("Ruch do uzupelnienia");
+  pokoj = nastepnyPokoj;
+  rozejrzyj();
+  zakonczTure();
 }
 
 // SEKCJA C — PRZEDMIOTY I WYGRANA
