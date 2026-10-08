@@ -33,16 +33,8 @@ function zakonczTure() {
   }
 }
 
-
-
-
-
-
-
 // SEKCJA A — INFORMACJE I MAPA
 function nazwaPokoju(numer) {
-  // TODO A1: switch; zwroc nazwe pokoju jako tekst.
-
 
   switch(numer)
   {
@@ -58,17 +50,25 @@ function nazwaPokoju(numer) {
       console.log("Nieznane pomieszczenie");
   }
 }
+
 function pomoc() {
   console.log('Dostepne: start(), pomoc(), status(), mapa(), rozejrzyj(), idz("prawo"), akcja("karta")');
   // TODO A5: dopisz pozostale kierunki i akcje oraz zasade kosztu.
 }
 function status() {
   // TODO A3: wypisz pokoj, energie, przedmioty, zasilanie i stan gry.
+
+
   console.log("Status do uzupelnienia");
 }
 function mapa() {
   // TODO A2: petla for od 1 do 4; nazwa i znacznik aktualnego pokoju.
-  console.log("Mapa do uzupelnienia");
+  for(let i=1; i<=4; i++)
+  {
+    console.log(`Numer pomieszczenia: ${i}`);
+    console.log(nazwaPokoju(i))
+    console.log((i === pokoj) ? "<-- Jesteś tutaj" : "");
+  }
 }
 function rozejrzyj() {
   // TODO A4: switch(pokoj); opis zgodny ze stanem przedmiotow.
@@ -76,7 +76,7 @@ function rozejrzyj() {
 }
 
 
-
+// KONIEC SEKCJI A — INFORMACJE I MAPA
 
 
 
