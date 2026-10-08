@@ -56,13 +56,20 @@ function pomoc() {
   // TODO A5: dopisz pozostale kierunki i akcje oraz zasade kosztu.
 }
 function status() {
-  // TODO A3: wypisz pokoj, energie, przedmioty, zasilanie i stan gry.
-
-
-  console.log("Status do uzupelnienia");
+  console.log("Status gry:");
+  //wypisanie obecnego pokoju
+  console.log(`Aktualny pokój to: ${pokoj}: ${nazwaPokoju(pokoj)}`);
+  //wypisanie aktualnej energi
+  console.log(`Aktualny poziom energii to: ${energia} (${energia / 10 * 100}%)`);
+  //Status karty 
+  console.log("Czy posiadasz kartę: " + (karta ? "tak" : "nie"));
+  //Status zasilania
+  console.log("Czy zasilanie działa: " + (zasilanie ? "tak" : "nie"));
+  //Sprawdzanie stausy gry 
+  console.log("Gra w toku: " + (koniec ? "Status zwycięstwa: " + (wygrana ? "Wygrana :3" : "Przegrana") : "Trwa..."));
+  
 }
 function mapa() {
-  // TODO A2: petla for od 1 do 4; nazwa i znacznik aktualnego pokoju.
   for(let i=1; i<=4; i++)
   {
     console.log(`Numer pomieszczenia: ${i}`);
