@@ -77,7 +77,7 @@ function akcja(co) {
     {
     case "karta":
       {
-      if (pokoj !== 1 || karta) {
+      if (pokoj != 1 || karta) {
         console.log("Tutaj nie ma karty do zabrania.");
         return;
       }
@@ -88,7 +88,7 @@ function akcja(co) {
 
     case "bezpiecznik":
       {
-      if (pokoj !== 2 || bezpiecznik) {
+      if (pokoj != 2 || bezpiecznik) {
         console.log("Tutaj nie ma bezpiecznika do zabrania.");
         return;
       }
@@ -99,7 +99,7 @@ function akcja(co) {
 
       case "napraw":
       {
-      if (pokoj !== 3 || bezpiecznik == false) {
+      if (pokoj != 3 || bezpiecznik == false) {
         console.log("Nie możesz naprawić zasilania.");
         return;
       }
@@ -112,14 +112,19 @@ function akcja(co) {
       case "wyjdz":
       {
 
-        if (pokoj == 4 && karta == true && zasilanie == true) {
-          wygrana = true;
-          koniec = true;
-          console.log("wygrałeś/aś.");
+        if (pokoj != 4 || karta != true || zasilanie != true) {
+          console.log("Nie możesz wyjść.");
           return;
       }
+      wygrana = true;
+      koniec = true;
+      console.log("wygrałeś/aś.");
         break;
       }
+      default:
+        {
+          console.log("Nie ma takiej akcji.");
+        }
 
     }
 
@@ -129,6 +134,7 @@ function akcja(co) {
   // TODO C2: przed zmiana sprawdz pokoj i wymagany stan.
   // TODO C3: przy odrzuceniu return; przy sukcesie break.
   // TODO C3: po switch jedno zakonczTure().
+  zakonczTure();
   // TODO C4: wygrana i koniec ustawione przed rozliczeniem tury!
 
 }
