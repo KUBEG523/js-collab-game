@@ -39,7 +39,10 @@ function nazwaPokoju(numer) {
   return "Nazwa do uzupelnienia";
 }
 function pomoc() {
-  console.log('Dostepne: start(), pomoc(), status(), mapa(), rozejrzyj(), idz("prawo"), akcja("karta")');
+  console.log('Dostepne: start(), pomoc(), status(), mapa(), rozejrzyj(), idz("prawo"), idz("lewo"), akcja("karta"), akcja("bezpiecznik"), akcja("napraw"), akcja("wyjdz")');
+  console.log('Są cztery pokoje. Każde przemieszczenie się do innego pokoju kosztuje jedną energię');
+  console.log('Żeby wyjść z serwerowni musisz odzyskać zasilanie oraz posiadać kartę')
+  console.log('Każde próby zabrania karty z recepcji kosztują jedną energię. Nie można zabrać bezpiecznika z recepcji. Naprawa zasilania bez przedmiotu nie działa.')
   // TODO A5: dopisz pozostale kierunki i akcje oraz zasade kosztu.
 }
 function status() {
