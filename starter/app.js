@@ -56,7 +56,7 @@ function pomoc() {
   console.log('Są cztery pokoje. Każde przemieszczenie się do innego pokoju kosztuje jedną energię');
   console.log('Żeby wyjść z serwerowni musisz odzyskać zasilanie oraz posiadać kartę')
   console.log('Każde próby zabrania karty z recepcji kosztują jedną energię. Nie można zabrać bezpiecznika z recepcji. Naprawa zasilania bez przedmiotu nie działa.')
-  // TODO A5: dopisz pozostale kierunki i akcje oraz zasade kosztu.
+
 }
 function status() {
   console.log("Status gry:");
@@ -158,12 +158,6 @@ function rozejrzyj() {
 
 
 // KONIEC SEKCJI A — INFORMACJE I MAPA
-
-
-
-
-
-
 
 
 // SEKCJA B — RUCH
@@ -281,14 +275,8 @@ function akcja(co) {
 
     }
 
-
-  
-
-  // TODO C2: przed zmiana sprawdz pokoj i wymagany stan.
-  // TODO C3: przy odrzuceniu return; przy sukcesie break.
-  // TODO C3: po switch jedno zakonczTure().
   zakonczTure();
-  // TODO C4: wygrana i koniec ustawione przed rozliczeniem tury!
+
 
 }
 
